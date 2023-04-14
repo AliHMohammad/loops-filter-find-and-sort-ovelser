@@ -248,7 +248,7 @@ function filterTeachers() {
     console.log(result);
 }
 
-filterName()
+// filterName()
 
 function filterName() {
     
@@ -262,4 +262,72 @@ function filterName() {
     console.log(result);
 }
 
+// ========== Find: array.find() ========== //
+
+// findTeacherByAge()
+
+function findTeacherByAge() {
+    
+    const result = teachers.find(age36);
+
+    function age36(teacher) {
+        
+        return teacher.age == 36;
+    }
+
+    console.log(result);
+}
+
+// findTeacherByName()
+
+function findTeacherByName() {
+    
+    const result = teachers.find(matchName);
+
+    function matchName(teacher) {
+        return teacher.name == "Martin Hansen";
+    }
+
+    console.log(result);
+}
+
 // ========== Sorting: array.sort() ========== //
+
+// sortNames()
+
+function sortNames() {
+
+    names.sort();
+
+    console.log(names);
+}
+
+// sortTal();
+
+function sortTal() {
+    
+    years.sort();
+
+    console.log(years);
+}
+
+sortTeachers()
+
+function sortTeachers() {
+    
+    teachers.sort(sortAge);
+
+    function sortAge(teacher1, teacher2) {
+        return teacher1.age - teacher2.age
+    }
+    
+    teachers.sort(sortName);
+    
+    
+    function sortName(teacher1, teacher2) {
+        return teacher1.name.localeCompare(teacher2.name)
+        
+    }
+
+    console.log(teachers);
+}
